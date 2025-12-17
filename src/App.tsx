@@ -3,6 +3,7 @@ import AccountList from './components/AccountList';
 import AccountForm from './components/AccountForm';
 import TransferForm from './components/TransferForm';
 import ExchangeRate from './components/ExchangeRate';
+import TransactionHistory from './components/TransactionHistory';
 import { Compte } from './types';
 
 function App() {
@@ -52,6 +53,11 @@ function App() {
             />
             <ExchangeRate />
           </div>
+        </div>
+
+        {/* Transaction History - Full Width */}
+        <div className="mt-6">
+          <TransactionHistory />
         </div>
 
         {/* Footer */}
