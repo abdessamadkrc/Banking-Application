@@ -1,46 +1,96 @@
-# Getting Started with Create React App
+# Banking Application Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React TypeScript frontend for the Banking microservices application with Tailwind CSS.
+
+## Features
+
+- 🏦 **Account Management**: Create, view, edit, and delete bank accounts
+- 💸 **Money Transfers**: Transfer funds between accounts
+- 💱 **Exchange Rates**: View real-time currency exchange rates
+- 🎨 **Modern UI**: Clean, responsive design with Tailwind CSS
+- ⚡ **TypeScript**: Full type safety and better developer experience
+
+## Tech Stack
+
+- React 19
+- TypeScript
+- Tailwind CSS
+- Axios for API calls
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- Backend services running on port 8098
+
+### Installation
+
+```bash
+npm install
+```
+
+### Running the Application
+
+```bash
+npm start
+```
+
+The application will open at [http://localhost:3000](http://localhost:3000)
+
+## API Endpoints
+
+The frontend connects to the backend gateway at `http://localhost:8098`:
+
+- **Accounts**: `/comptes`
+- **Transactions**: `/transactions/transfer`
+- **Exchange Rates**: `/reporting/api/rate`
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── AccountList.tsx      # Display all accounts
+│   ├── AccountForm.tsx      # Create/Edit accounts
+│   ├── TransferForm.tsx     # Transfer money
+│   └── ExchangeRate.tsx     # Currency exchange
+├── services/
+│   └── api.ts              # API service layer
+├── types/
+│   └── index.ts            # TypeScript interfaces
+├── App.tsx                 # Main application
+└── index.tsx              # Entry point
+```
+
+## Usage
+
+### Creating an Account
+
+1. Select account type (Checking, Savings, or Premium)
+2. Enter initial balance
+3. Click "Create Account"
+
+### Transferring Money
+
+1. Select source account
+2. Select destination account
+3. Enter amount
+4. Click "Transfer"
+
+### Checking Exchange Rates
+
+1. Select "From" currency
+2. Select "To" currency
+3. Click "Get Exchange Rate"
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Run development server
+- `npm build` - Build for production
+- `npm test` - Run tests
+- `npm eject` - Eject from Create React App
 
-### `npm start`
+## License
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+MIT
